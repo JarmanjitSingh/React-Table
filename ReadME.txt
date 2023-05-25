@@ -42,4 +42,29 @@ II. by useMemo hook in the FilteringTable component   const defaultColumn = Reac
 III. useAsyncDebounce hook -- you can use the useDebounce hook to delay the execution of the filtering logic until the user has stopped typing for a specified period.
 By using debouncing, you can prevent the filtering function from being called excessively while the user is still typing. This can help improve performance and reduce unnecessary re-renders in your React application.
 
+4. Pagination -- Basic previous and next page 
+
+I. import usePagination hook and remove footer 
+II. place it as second argument and destructure page on replacement of rows and import nextPage , previousPage
+III. In table body replace rows.map with page.map and you can see in the browser it will showing 10 records only.
+IV. add previous and next button and onclick on it call previousPage and nextPage.
+V. destructure canPreviousPage and canNextPage this will help when no any previous or next page available then with it we can disable button.
+Vi. for showing total page and where we now destructure two hooks pageOptions and state and from state destructure pageIndex. and place it above the buttons in html.
+
+
+5. Pagination -- Goto page
+
+I.  destructure gotoPage and pageCount for going to any page,
+II. add last page and first page buttons.
+III. add input to go on any page.
+IV. if we write 
+      initialState: {pageIndex: 2} in after the data in useTable hook then after any refres it will showing from the 3rd page.
+
+6. Pagination -- page Size
+
+I. destructure setPageSize from useTable and pageSize from the state.
+II. use the select option to display page size with users preference .
+III. you can also set the initial page size with initialState: {pageIndex: 2, pageSize: 5}.
+
+
 
