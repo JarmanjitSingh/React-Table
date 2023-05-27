@@ -66,5 +66,33 @@ I. destructure setPageSize from useTable and pageSize from the state.
 II. use the select option to display page size with users preference .
 III. you can also set the initial page size with initialState: {pageIndex: 2, pageSize: 5}.
 
+7. Row Selection
 
+I. Slice rows we can only show 10 rows
+II. create the CheckBox component and copy paste code in it from github
+III. import useRowSelect hook and pass as it is second arguement
+IV. destructure selectedFlatRows this will give you the flat array of selected rows
+V. Tie the checkBox component with Table component, we doing it by programmitically in the begining of the columns so we can pass the function as the third argument of the useTable hook,
+VI. this function gets all the table hooks by an argument, apply visible columns property, and push method this will receving all the columns as arguemnt and returns the array of columns
+VII. Showing the selected rows in the ui . so after the table component place the code
+VIII. Remove strict mode from main.jsx (or my be it not needs if it is fixed  )
+
+8.  Column Ordering 
+
+I. import useColumnOrder hook and pass as a second arguement
+II. destructure setColumnOrder
+III. add a button before the table tag and onclick it call the setColumnOrder which accepts the array of the accessor of the columns and You can change here the order of columns so when user click on the button order has been changes according to this array
+
+9. Column Hinding 
+
+I. destructure allColumns and getToggleHideAllColumnsProps
+
+10. Sticky colunms -- this functionality is not provided by the react table so we can install another package react-table-Sticky for more watch video
+
+Further to study in react-Table
+I. Grouping
+II. In-line row editing
+III. Row Drag and Drop 
+IV. Column Resizing
+V. React Table + material UI
 
