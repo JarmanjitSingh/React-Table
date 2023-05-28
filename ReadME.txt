@@ -9,7 +9,7 @@ VI. include the desire css
 
 2. Sorting Table
 
-I. sorting by useSortBy hook 
+I. sorting by useSortBy hook and add as a second arguement of useTable hook
 II. add this in th tag column.getSortByToggleProps()
 III. but in date format it will only format iso format but we show dates in another format in ui so that we are using date-fns package and use it in the columns.js file.
 

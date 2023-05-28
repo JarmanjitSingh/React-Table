@@ -1,3 +1,5 @@
+import { Toaster } from "react-hot-toast"
+import WhiteTable from "./WhiteAmsTableProject/components/WhiteTable"
 import BasicTable from "./components/BasicTable"
 import ColumnHiding from "./components/ColumnHiding"
 import ColumnOrder from "./components/ColumnOrder"
@@ -16,7 +18,11 @@ function App() {
       {/* <PaginationTable /> */}
       {/* <RowSelection /> */}
       {/* <ColumnOrder /> */}
-      <ColumnHiding />
+      {/* <ColumnHiding /> */}
+      <WhiteTable />
+
+
+      <Toaster />
     </>
   )
 }
